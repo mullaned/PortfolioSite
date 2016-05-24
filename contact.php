@@ -61,6 +61,7 @@ function sendmail($to, $subject, $message, $from) {
 	$headers .= 'From: ' . $from . "\r\n";
 	
 	$result = mail($to,$subject,$message,$headers);
+	header("Location: http://davem.eu/portfolios/thankyou.html");
 	
 	if ($result) return 1;
 	else return 0;
